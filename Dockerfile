@@ -11,7 +11,6 @@ ADD install.expect /tmp/install.expect
 ADD wvsc /tmp/wvsc
 ADD license_info.json /tmp/license_info.json
 RUN cd /tmp && chmod +x /tmp/install.expect && /tmp/install.expect
-
-CMD su -l acunetix -c /home/acunetix/.acunetix_trial/start.sh
 RUN cp /tmp/wvsc /home/acunetix/.acunetix/v_200217097/scanner/
 RUN cp /tmp/license_info.json /home/acunetix/.acunetix/data/license/
+CMD su -l acunetix -c /home/acunetix/.acunetix_trial/start.sh
